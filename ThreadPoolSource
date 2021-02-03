@@ -43,7 +43,7 @@ void m_work_thread()
 
 int main()
 {
-  main_event = CreateEvent(NULL, FALSE, FALSE, NULL);
+ 	main_event = CreateEvent(NULL, FALSE, FALSE, NULL);
 	for (int i = 0; i < (THREADSIZE) + 1; i++)
 		events[i] = CreateEvent(NULL, FALSE, FALSE, NULL);
 
@@ -81,6 +81,6 @@ int main()
 
 	for (int i = 0; i < THREADSIZE; i++)
 		threads[i].join();
-  threads.clear();
-  return 0;
+  	threads.clear();
+  	return 0;
 }
